@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Masterclass Hub — Data analysis coaching: SQL, analysis and dashboards</title>
+<meta name="description" content="Online data analysis coaching: SQL from joins to window functions, framing analysis questions, dashboards that get used, and presenting findings to stakeholders.">
+<link rel="canonical" href="https://masterclasshub.shop/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://masterclasshub.shop/">
+<meta property="og:site_name" content="Masterclass Hub">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Masterclass Hub — Data analysis coaching: SQL, analysis and dashboards">
+<meta property="og:description" content="Online data analysis coaching: SQL from joins to window functions, framing analysis questions, dashboards that get used, and presenting findings to stakeholders.">
+<meta name="theme-color" content="#051614">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Inter:wght@400..700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Thème appliqué avant le premier rendu (évite le flash) -->
+<script>
+document.documentElement.classList.remove('no-js');
+(function(){try{var t=localStorage.getItem('site-theme');if(t){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Masterclass Hub",
+  "url": "https://masterclasshub.shop/",
+  "email": "contact@masterclasshub.shop",
+  "description": "Online data analysis coaching: SQL from joins to window functions, framing analysis questions, dashboards that get used, and presenting findings to stakeholders.",
+  "areaServed": "US",
+  "knowsLanguage": "en"
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main navigation">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect class="bm-bg" width="64" height="64" rx="16"/>
+        <g class="bm-ic" transform="translate(14 14) scale(1.5)" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></g>
+      </svg>
+      <span>Masterclass Hub<span class="brand__sub">Data analysis coaching</span></span>
+    </a>
+
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="about.html">How we work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="btn btn--primary" href="contact.html">Free intro call</a></li>
+    </ul>
+
+    <div class="nav__cta">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn--primary" href="contact.html">Free intro call</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero__inner">
+    <div>
+      <span class="eyebrow hero__eyebrow">Online · Analysts, and people who inherited the spreadsheets</span>
+      <h1>Write the query,<br> <em>answer the question</em>.</h1>
+      <p class="hero__lede">Most analysis goes wrong before any SQL is written. Someone asks for a number, nobody asks what decision it's for, and a week later the dashboard gets ignored.</p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--lg" href="contact.html">Book my free intro call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--on-dark btn--lg" href="programs.html">See the programs</a>
+      </div>
+
+      <ul class="hero__proof">
+        <li><span class="stat__num">8–12</span><span class="stat__label">weeks per program</span></li>
+        <li><span class="stat__num">48 h</span><span class="stat__label">for a query review</span></li>
+        <li><span class="stat__num">10 max</span><span class="stat__label">in a live session</span></li>
+        <li><span class="stat__num">$0</span><span class="stat__label">intro call</span></li>
+      </ul>
+    </div>
+
+    <div class="hero__art">
+      <svg viewBox="0 0 620 540" role="img" aria-label="A data analysis program in week 4 of 10, showing this week's work, the next live session and coach feedback.">
+        <defs>
+          <linearGradient id="hbg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#1e2d2c"/><stop offset="1" stop-color="#041210"/>
+          </linearGradient>
+        </defs>
+        <rect width="620" height="540" rx="22" fill="url(#hbg)"/>
+        <circle cx="500" cy="96" r="150" fill="#115e59" opacity=".16"/>
+        <circle cx="96" cy="470" r="120" fill="#115e59" opacity=".08"/>
+
+        <g style="font-family: var(--font-body)">
+          <!-- Carte programme -->
+          <rect x="70" y="62" width="390" height="370" rx="20" fill="#f2f8f7"/>
+          <text x="100" y="106" font-size="12" font-weight="650" letter-spacing="1.6" fill="#707c7a">PROGRAM · WEEK 4 OF 10</text>
+          <text x="100" y="146" font-size="27" font-weight="700" fill="#051614" style="font-family: var(--font-display)">SQL that sticks</text>
+          <rect x="100" y="170" width="320" height="10" rx="5" fill="#d1d8d7"/>
+          <rect x="100" y="170" width="128" height="10" rx="5" fill="#115e59"/>
+          <text x="100" y="206" font-size="13" fill="#707c7a">40 % complete</text>
+          <circle cx="112" cy="250" r="11" fill="#115e59"/><path d="M106.5 250l4 4 7-7.5" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="134" y="255" font-size="15.5" fill="#707c7a" font-weight="450">Joins without guessing</text>
+          <circle cx="112" cy="288" r="11" fill="#115e59"/><path d="M106.5 288l4 4 7-7.5" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="134" y="293" font-size="15.5" fill="#707c7a" font-weight="450">One query a day</text>
+          <circle cx="112" cy="326" r="10" fill="none" stroke="#d1d8d7" stroke-width="2"/><text x="134" y="331" font-size="15.5" fill="#051614" font-weight="560">Window functions, week 6</text>
+          <circle cx="112" cy="364" r="10" fill="none" stroke="#d1d8d7" stroke-width="2"/><text x="134" y="369" font-size="15.5" fill="#051614" font-weight="560">Check the row counts</text>
+
+          <!-- Carte séance -->
+          <rect x="392" y="296" width="196" height="148" rx="18" fill="#1c2b29" stroke="#ffffff" stroke-opacity=".08"/>
+          <rect x="416" y="320" width="46" height="46" rx="12" fill="#115e59"/>
+          <g transform="translate(427 331)" fill="none" stroke="#ffffff" color="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="M15.5 10.5 21.5 7v10l-6-3.5z"/></g>
+          <text x="416" y="396" font-size="15" font-weight="650" fill="#f2f8f7">Live session</text>
+          <text x="416" y="420" font-size="13" fill="#548b87">Tue · 6:30 PM</text>
+
+          <!-- Retour du coach -->
+          <rect x="34" y="446" width="336" height="72" rx="16" fill="#f2f8f7" stroke="#d1d8d7"/>
+          <circle cx="72" cy="482" r="20" fill="#cadcdb"/>
+          <g transform="translate(62 472) scale(.84)" fill="none" stroke="#0b3d3a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></g>
+          <text x="104" y="476" font-size="13.5" font-weight="700" fill="#051614">Coach feedback</text>
+          <text x="104" y="498" font-size="13" fill="#707c7a">« That join duplicated rows »</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track"><span>SQL</span><span>Joins</span><span>Window functions</span><span>Aggregation</span><span>Data cleaning</span><span>Dashboards</span><span>Metrics</span><span>Cohorts</span><span>Stakeholders</span><span>Write-ups</span><span>SQL</span><span>Joins</span><span>Window functions</span><span>Aggregation</span><span>Data cleaning</span><span>Dashboards</span><span>Metrics</span><span>Cohorts</span><span>Stakeholders</span><span>Write-ups</span></div>
+</div>
+
+<section class="section wrap" id="programs">
+  <div class="section-head reveal">
+    <span class="eyebrow">The programs</span>
+    <h2>Four programs, written on real queries</h2>
+    <p>You write SQL every week and someone reads it properly. That's the loop that makes analysts.</p>
+  </div>
+  <div class="grid grid--4 reveal-group">
+    <a class="card" href="programs.html#sql">
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+      <h3>SQL that sticks</h3>
+      <p>Joins you understand rather than copy, aggregation, subqueries and window functions, practiced daily.</p>
+      <ul class="tags"><li>Joins</li><li>Aggregation</li><li>CTEs</li><li>Window functions</li></ul>
+      <span class="arrow-link">See the program <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card" href="programs.html#analysis">
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div>
+      <h3>Doing an analysis</h3>
+      <p>Framing the real question, cleaning data honestly, choosing metrics and knowing what your numbers can't prove.</p>
+      <ul class="tags"><li>Framing</li><li>Cleaning</li><li>Metrics</li><li>Caveats</li></ul>
+      <span class="arrow-link">See the program <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card" href="programs.html#dashboards">
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3.5" width="18" height="17" rx="2.5"/><path d="M3 9h18M9 9v11.5"/></svg></div>
+      <h3>Dashboards &amp; reports</h3>
+      <p>Charts that read in three seconds, dashboards with a point of view, and reports that survive a skim.</p>
+      <ul class="tags"><li>Charts</li><li>Layout</li><li>Definitions</li><li>Maintenance</li></ul>
+      <span class="arrow-link">See the program <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="card" href="programs.html#stakeholders">
+      <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="7" width="19" height="13.5" rx="2.5"/><path d="M8.5 7V5a1.5 1.5 0 0 1 1.5-1.5h4A1.5 1.5 0 0 1 15.5 5v2M2.5 12.5h19"/></svg></div>
+      <h3>Working with stakeholders</h3>
+      <p>Scoping requests, writing up results clearly, and presenting to people who don't want the methodology.</p>
+      <ul class="tags"><li>Scoping</li><li>Write-ups</li><li>Presenting</li><li>Pushback</li></ul>
+      <span class="arrow-link">See the program <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<section class="section section--flush wrap" id="how-it-works">
+  <div class="section-head reveal">
+    <span class="eyebrow">How it works</span>
+    <h2>Write queries, get them read</h2>
+    <p>Code review is how analysts improve, and most people working alone never get any.</p>
+  </div>
+  <div class="grid grid--4 steps reveal-group">
+    <article class="step">
+      <h3>Free intro call</h3>
+      <p>Twenty minutes on your work, your tools and where you get stuck.</p>
+    </article>
+    <article class="step">
+      <h3>One query a day</h3>
+      <p>Short, deliberate practice on real or public data.</p>
+    </article>
+    <article class="step">
+      <h3>Write up one analysis a week</h3>
+      <p>The answer, the method, and the caveats.</p>
+    </article>
+    <article class="step">
+      <h3>Written review</h3>
+      <p>Within 48 hours: correctness, readability and whether it answers the question.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section wrap" id="pricing">
+  <div class="section-head section-head--center reveal">
+    <span class="eyebrow">Plans</span>
+    <h2>Pick your level of support</h2>
+    <p>Month to month, cancel anytime. The 20-minute intro call is free.</p>
+  </div>
+  <div class="grid grid--3 plans reveal-group">
+    <article class="plan">
+      
+      <h3>Group sessions</h3>
+      <p class="plan__desc">A weekly session solving problems and reviewing members' queries.</p>
+      <p class="plan__price">$39<span class="plan__period">/ month</span></p>
+      <ul class="plan__features">
+        <li>One 75-minute live session each week</li>
+        <li>Groups of 10 analysts maximum</li>
+        <li>Queries reviewed live</li>
+        <li>Practice datasets and exercises</li>
+        <li>Replays for 30 days</li>
+      </ul>
+      <a class="btn btn--ghost btn--block" href="contact.html">Join the group</a>
+    </article>
+    <article class="plan plan--featured">
+      <span class="plan__tag">Most popular</span>
+      <h3>Coaching essentials</h3>
+      <p class="plan__desc">A coach on your SQL, your analyses and your write-ups.</p>
+      <p class="plan__price">$109<span class="plan__period">/ month</span></p>
+      <ul class="plan__features">
+        <li>Personal 8 to 12 week program</li>
+        <li>Queries reviewed within 48 hours</li>
+        <li>One 45-min session every two weeks</li>
+        <li>Work on your own data problems</li>
+        <li>Access to all group sessions</li>
+      </ul>
+      <a class="btn btn--primary btn--block" href="contact.html">Get started</a>
+    </article>
+    <article class="plan">
+      
+      <h3>One-on-one</h3>
+      <p class="plan__desc">For a new analyst role, a reporting overhaul, or moving from spreadsheets to SQL.</p>
+      <p class="plan__price">$199<span class="plan__period">/ month</span></p>
+      <ul class="plan__features">
+        <li>One 45-min session each week</li>
+        <li>Replies within 24 hours</li>
+        <li>Live pairing on your queries</li>
+        <li>Dashboard or report rebuilt with you</li>
+        <li>Access to all group sessions</li>
+      </ul>
+      <a class="btn btn--ghost btn--block" href="contact.html">Talk it through</a>
+    </article>
+  </div>
+  <p class="plans-note">Prices in USD. Cancel anytime, no contract.</p>
+</section>
+
+<section class="section section--flush wrap">
+  <div class="split reveal">
+    <div class="split__art">
+      <svg viewBox="0 0 520 420" role="img" aria-label="Example of a typical week: Learn, Session, Query, Write-up, Review.">
+        <rect width="520" height="420" rx="20" fill="#e2edec"/>
+        <circle cx="450" cy="54" r="96" fill="#115e59" opacity=".12"/>
+        <g style="font-family: var(--font-body)">
+        <text x="40" y="62" font-size="22" font-weight="700" fill="#051614" style="font-family: var(--font-display)">A typical week</text>
+        <text x="80" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#707c7a">Mon</text>
+        <rect x="40" y="112" width="80" height="262" rx="12" fill="#f2f8f7"/>
+        <rect x="46" y="133" width="68" height="85" rx="9" fill="#b7d0ce"/>
+        <text x="80" y="155" text-anchor="middle" font-size="11" font-weight="650" fill="#051614">Learn</text>
+        <text x="172" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#707c7a">Tue</text>
+        <rect x="132" y="112" width="80" height="262" rx="12" fill="#f2f8f7"/>
+        <rect x="138" y="208" width="68" height="105" rx="9" fill="#115e59"/>
+        <text x="172" y="230" text-anchor="middle" font-size="11" font-weight="650" fill="#ffffff">Session</text>
+        <text x="264" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#707c7a">Wed</text>
+        <rect x="224" y="112" width="80" height="262" rx="12" fill="#f2f8f7"/>
+        <rect x="230" y="148" width="68" height="75" rx="9" fill="#b7d0ce"/>
+        <text x="264" y="170" text-anchor="middle" font-size="11" font-weight="650" fill="#051614">Query</text>
+        <text x="356" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#707c7a">Thu</text>
+        <rect x="316" y="112" width="80" height="262" rx="12" fill="#f2f8f7"/>
+        <rect x="322" y="243" width="68" height="85" rx="9" fill="#051614"/>
+        <text x="356" y="265" text-anchor="middle" font-size="11" font-weight="650" fill="#f2f8f7">Write-up</text>
+        <text x="448" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#707c7a">Fri</text>
+        <rect x="408" y="112" width="80" height="262" rx="12" fill="#f2f8f7"/>
+        <rect x="414" y="173" width="68" height="115" rx="9" fill="#b7d0ce"/>
+        <text x="448" y="195" text-anchor="middle" font-size="11" font-weight="650" fill="#051614">Review</text>
+        </g>
+      </svg>
+    </div>
+    <div>
+      <span class="eyebrow">How we work</span>
+      <h2>Coaching, not consulting</h2>
+      <p>We don't do your analysis for you, and we're not a recruiter or certification body. The point is that you can write the query, defend the number and explain it to someone who doesn't care how clever it was.</p>
+      <p>One rule matters in this field: don't bring confidential, personal or regulated data into a coaching session. We work on anonymized samples, public datasets or your own structures described in general terms, and your employer's data policy always comes first.</p>
+      <p><a class="arrow-link" href="about.html">See how we work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--flush wrap" id="faq">
+  <div class="section-head section-head--center reveal">
+    <span class="eyebrow">Frequently asked</span>
+    <h2>The questions we get most</h2>
+  </div>
+  <div class="faq reveal">
+    <details>
+      <summary>Do I need to know Python?</summary>
+      <p>Not for most analysis work. SQL plus a BI tool covers a great deal, and we'll tell you honestly when a script would save you time.</p>
+    </details>
+    <details>
+      <summary>I only know spreadsheets.</summary>
+      <p>That's a fine starting point, and the concepts transfer. We start with SQL fundamentals and move at your pace.</p>
+    </details>
+    <details>
+      <summary>Can I bring my company's data?</summary>
+      <p>No. Bring the shape of the problem, anonymized samples, or a public dataset. Confidential data stays where it belongs.</p>
+    </details>
+    <details>
+      <summary>Will this get me an analyst job?</summary>
+      <p>It builds the skills those roles test. We're not recruiters, we issue no certificate, and we don't promise outcomes.</p>
+    </details>
+    <details>
+      <summary>My dashboards get ignored.</summary>
+      <p>Very common, and usually a framing problem rather than a design one. That's the stakeholders program.</p>
+    </details>
+    <details>
+      <summary>Can I cancel anytime?</summary>
+      <p>Yes. No contract, no minimum term. Access stays open until the end of the month you already paid for.</p>
+    </details>
+  </div>
+</section>
+
+<section class="wrap section--tight">
+  <div class="cta-band reveal">
+    <h2>Stuck on a query or a question?</h2>
+    <p>Twenty minutes on your work and where it gets difficult. Free.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary btn--lg" href="contact.html">Book my free intro call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn--on-dark btn--lg" href="programs.html">See the programs</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect class="bm-bg" width="64" height="64" rx="16"/>
+        <g class="bm-ic" transform="translate(14 14) scale(1.5)" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></g>
+      </svg>
+          <span>Masterclass Hub<span class="brand__sub">Data analysis coaching</span></span>
+        </a>
+        <p>Data analysis coaching: SQL you can write from memory, analysis that answers the real question, dashboards people use, and findings colleagues act on.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="programs.html#sql">SQL that sticks</a></li>
+          <li><a href="programs.html#analysis">Doing an analysis</a></li>
+          <li><a href="programs.html#dashboards">Dashboards &amp; reports</a></li>
+          <li><a href="programs.html#stakeholders">Working with stakeholders</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Masterclass Hub</h4>
+        <ul>
+          <li><a href="about.html">How we work</a></li>
+          <li><a href="index.html#how-it-works">How it works</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="legal.html">Legal &amp; policies</a></li>
+          <li><a href="legal.html#privacy">Privacy</a></li>
+          <li><a href="legal.html#terms">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© <span data-year>2026</span> Masterclass Hub. All rights reserved.</p>
+      <p><a href="mailto:contact@masterclasshub.shop">contact@masterclasshub.shop</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
